@@ -14,7 +14,7 @@ pipeline {
         stage("Build-web"){
             steps{
                 sh '''
-                    docker build -t redlock-web-2.0 ./redlock-web-2.0/web
+                    docker build -t redlock-web-2.0 ./redlock-web-2.0
                 '''
             }
         }
