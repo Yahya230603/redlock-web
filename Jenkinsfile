@@ -7,7 +7,7 @@ pipeline {
         stage("Build-database"){
             steps{
                 sh '''
-                    docker build -t redlock-db-2.0 ./redlock-db-2.0
+                    docker build -t redlock-db-2.0 ./redlock-database
                 '''
             }
         }
