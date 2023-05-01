@@ -24,16 +24,15 @@
 	
 	<div style="display: flex; flex-direction: column; gap: 8px; padding: 8px;">
 		<?php
-			// membuat koneksi ke database
-			$servername = "mysql_db";
+
+			$servername = "redlock-database-2.0";
 			$username = "root";
-			$password = "root";
+			$password = "yahyun";
 			$dbname = "Redlock";
 
-			// Membuat koneksi ke database
+
 			$conn = new mysqli($servername, $username, $password, $dbname);
 
-			// Mengecek apakah koneksi berhasil
 			if ($conn->connect_error) {
 			    die("Connection failed: " . $conn->connect_error);
 			}
@@ -42,7 +41,6 @@
 			$result = $conn->query($sql);
 
 			if ($result->num_rows > 0) {
-			    // output data of each row
 			    while($row = $result->fetch_assoc()) {
 			        echo "<div class='row'>" . 
 			             "<div>ID: " . $row["ID"] . "</div>" .
