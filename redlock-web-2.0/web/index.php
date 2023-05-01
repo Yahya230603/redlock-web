@@ -41,6 +41,7 @@
 			$result = $conn->query($sql);
 
 			if ($result->num_rows > 0) {
+				echo "jumlah user : $result->num_rows ";
 			    while($row = $result->fetch_assoc()) {
 			        echo "<div class='row'>" . 
 			             "<div>ID: " . $row["ID"] . "</div>" .
